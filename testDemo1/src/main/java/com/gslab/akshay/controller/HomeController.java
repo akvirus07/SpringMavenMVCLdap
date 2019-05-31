@@ -50,14 +50,14 @@ public class HomeController {
 		return new ModelAndView("/details", "Employee", emp);
 	}
 
-	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-	public ModelAndView deleteEmployee(@RequestParam("first_name") String fname) throws NamingException {
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	public String deleteEmployee(@RequestParam("first_name") String fname) throws NamingException {
 		System.out.println("ïnside deleteEmployee() in controller");
-		service.deleteEmployee(fname);
-		System.out.println("this emp deleted successfully");
-		return new ModelAndView("redirect:/delete");
+		//System.out.println("this emp deleted successfully");
+		return service.deleteEmployee(fname);
+		//return new ModelAndView("redirect:/employee/delete");
 	}
-	@RequestMapping(value="/update", method=RequestMethod.PUT )
+	@RequestMapping(value="/update", method=RequestMethod.POST )
 	public String updateEmployee(@RequestParam("first_name") String fname,
 			@RequestParam("last_name") String sname, @RequestParam("empNo") String empNo) throws NamingException{
 		Employee emp = new Employee();

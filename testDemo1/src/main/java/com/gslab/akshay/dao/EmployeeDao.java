@@ -85,7 +85,7 @@ public class EmployeeDao {
 		att.put(sn);
 		att.put("telephoneNumber", "1234567890");
 		att.put("employeeNumber", emp.getEmpNo());
-		context.modifyAttributes("cn="+emp.getFname()+",ou=engineer,ou=People,dc=maxcrc,dc=com",1,att );
+		context.modifyAttributes("employeeNumber="+emp.getEmpNo()+",ou=engineer,ou=People,dc=maxcrc,dc=com",context.REPLACE_ATTRIBUTE,att );
 		return "emp modified successfully";
 	}
 

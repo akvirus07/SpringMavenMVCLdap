@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>LDAP Register Form</h1>
-	<form action="../employee/delete" method="delete">
+	<form action="../employee/delete" method="get">
 		<table style="with: 50%">
 			<tr>
 				<td>First Name</td>

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>LDAP Register Form</h1>
-	<form action="../employee/update" method="update">
+	<form action="../employee/update" method="post">
 		<table style="with: 50%">
 			<tr>
 				<td>First Name</td>
