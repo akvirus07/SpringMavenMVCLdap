@@ -22,8 +22,8 @@ public class EmployeeService {
 	public Employee getEmployee(String fName)throws NamingException{
 		return dao.getEmployee(fName);
 	}
-	public String deleteEmployee(String fname) throws NamingException {
-		return dao.deleteEmployee(fname);
+	public String deleteEmployee(int empNo) throws NamingException {
+		return dao.deleteEmployee(empNo);
 	}
 	public String updateEmployee(Employee emp) throws NamingException {
 		return dao.updateEmployee(emp);

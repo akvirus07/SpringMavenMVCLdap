@@ -61,13 +61,13 @@ public class EmployeeDao {
 		e.setSname((String) lastName.get());
 		Attribute empNo= att.get("employeeNumber");
 		e.setEmpNo((String)empNo.get());
-		System.out.println("name:"+e.getFname()+"lastName:"+e.getSname()+"emp:"+e.getEmpNo());
+		//System.out.println("name:"+e.getFname()+"lastName:"+e.getSname()+"emp:"+e.getEmpNo());
 		return e;
 	}
 
-	public String deleteEmployee(String fname) throws NamingException {
+	public String deleteEmployee(int empNo) throws NamingException {
 		createConnection();
-		context.destroySubcontext("cn="+fname+",ou=engineer,ou=People,dc=maxcrc,dc=com");
+		context.destroySubcontext("employeeNumber="+empNo+",ou=engineer,ou=People,dc=maxcrc,dc=com");
 		return "deleted Successfully";
 	}
 

@@ -30,6 +30,10 @@ public class Employee {
 	public void setEmpNo(String empNo) {
 		this.empNo = empNo;
 	}
+	@Override
+	public String toString() {
+		return "Employee [fname=" + fname + ", sname=" + sname + ", empNo=" + empNo + "]";
+	}
 	
 
 }
